@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #00539C;
+}
+.my-navbar
+{
+    background-color:  #EEA47F !important;
+    box-shadow:  8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+.my-navbar img
+{
+    /* padding-top: 3px; */
+    padding-left: 15PX;
+}
+.my-navbar .btn
+{
+    text-decoration: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 15PX;
+font-weight: bolder;
+    background-color: #fff;
+box-shadow:  8px 10px 10px 1px rgba(0,0,0,0.5);
+margin-right: 150px;
+color: black;
+    /* margin-left: 75%; */
+}
+.my-navbar a{
+    text-decoration: none;
+    color: black;
+font-weight: bolder;
+
+}
+.main-heading
+{
+    color: #EEA47F ;
+    text-align: center;
+    margin-top: 15%;
+    font-size:  100px;
+}
+.main1-heading
+{
+    color: #EEA47F ;
+    text-align: center;
+    
+}
+.my-btn
+{
+    width: 250px;
+    align-items: center;
+    margin-left: 42%;
+    border-radius: 15px;
+    height: 50px;
+    font-weight: bolder;
+    background-color: #fff;
+    border-color: white;
+box-shadow:  8px 10px 10px 1px rgba(0,0,0,0.5);
+}
+
+/* -------------------------- SignUp -------------------- */
+
+.center
+{
+    border: 1px solid #EEA47F;
+    align-items: center;
+    background-color: #EEA47F;
+    width: 25%;
+    margin-top: 1% ;
+}
+ #firstName
+{
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+}
+#firstName{
+    font-size: larger;
+}
+#firstName:hover
+{
+background-color: #EEA47F;
+}
+
+#lastName
+{
+    
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15%;
+
+}
+#lastName{
+    font-size: larger;
+}
+#lastName:hover
+{
+background-color: #EEA47F;
+}
+.input1
+{
+    margin-top: 12%;
+}
+
+#email
+{
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+}
+#email{
+    font-size: larger;
+}
+#email:hover
+{
+background-color: #EEA47F;
+}
+
+#password
+{
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+}
+#password{
+    font-size: larger;
+}
+#password:hover
+{
+background-color: #EEA47F;
+}
+
+#rePassword
+{
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+}
+#rePassword{
+    font-size: larger;
+}
+#rePassword:hover
+{
+background-color: #EEA47F;
+}
+#button2
+{
+    width: 84%;
+    margin-top: 2%;
+}
+form p a
+{
+    text-decoration: none;
+    color: #00539C;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* ----------------- login -------------- */
+#Email
+{
+    padding-top: 1%;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+    padding-bottom: 1%;
+}
+#Password
+{
+    padding-top: 1%;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color: transparent;
+    border-color: #00539C;
+    background-color: #EEA47F;
+    width: 300px;
+    height: 30px;
+    padding-bottom: 1%;
+}
+.Email
+{
+    margin-top: 12%;
+}
+.Password
+{
+    margin-top: 12%;
+}
+.pass
+{
+    margin-top: 2%;
+    text-align: center;
+}
+.submite-btn
+{
+    width: 80%;
+    background-color: rgb(41, 169, 41);
+    color: #fff;
+    border-radius: 12px;
+    height: 35px;
+}
+ p a
+{
+    text-decoration: none;
+    color: #00539C;
+    font-weight: bold;
+}
+
+/* ----------------- Main Quiz App ----------------- */
+#email
+{
+    font-size: larger;
+    font-family: "Josefin-Sans",sans-serif;
+    margin-top: -2%;
+   margin-left: 2%;
+   color: #fff;
+   font-weight: bolder;
+}
+#name{
+    font-size: larger;
+    font-family: "Josefin-Sans",sans-serif;
+    /* margin-top: -2%; */
+   margin-right: 2%;
+   color: #fff;
+   font-weight: bolder;
+}
+ul li{
+    list-style: none;
+}
+.log-btn{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #00539C;
+    color: #fff;
+    margin-top: 3%;
+}
+
+/* ------------------------ Cours HTML --------------------- */
+
+.box1{
+    border: 1px solid silver;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 5%;
+    border-radius: 12px;
+    font-family: 'Josefin-Sans',sans-serif !important;
+    height: 100px;
+}
+.Join1{
+    width: 45%;
+    background-color: #fff;
+margin-top: 2%;
+margin-bottom: 2;
+border-radius: 8px;
+}
+.heading-1{
+    padding-top: 2%;
+}
+
+/* ------------------------ Cours CSS --------------------- */
+
+.box2{
+    border: 1px solid silver;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 5%;
+    border-radius: 12px;
+    font-family: 'Josefin-Sans',sans-serif !important;
+    height: 100px;
+}
+.Join2{
+    width: 45%;
+    background-color: #fff;
+margin-top: 2%;
+margin-bottom: 2;
+border-radius: 8px;
+}
+.heading-2{
+    padding-top: 2%;
+}
+
+/* ------------------------ Cours BootStrap --------------------- */
+
+.box3{
+    border: 1px solid silver;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 5%;
+    border-radius: 12px;
+    font-family: 'Josefin-Sans',sans-serif !important;
+    height: 100px;
+}
+.Join3{
+    width: 45%;
+    background-color: #fff;
+margin-top: 2%;
+margin-bottom: 2;
+border-radius: 8px;
+}
+.heading-3{
+    padding-top: 2%;
+}
+
+/* ------------------------ Cours JavaScript --------------------- */
+
+.box4{
+    border: 1px solid silver;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 5%;
+    border-radius: 12px;
+    font-family: 'Josefin-Sans',sans-serif !important;
+    height: 100px;
+}
+.Join4{
+    width: 45%;
+    background-color: #fff;
+margin-top: 2%;
+margin-bottom: 2;
+border-radius: 8px;
+}
+.heading-4{
+    padding-top: 2%;
+}
+
+
+/* ------------------------- HTML ------------------------------ */
+.container{
+    border: 1px solid #00539C;
+    background-color: #fff;
+    width: 40%;
+    /* text-align: center; */
+    margin-top: 15%;
+    border-radius: 12px;
+box-shadow:  8px 10px 10px 1px rgba(0,0,0,0.5);
+
+}
+.quiz1Heading{
+    text-align: center  ;
+    padding-top: 2%;
+}
+#question{
+    text-align: center;
+}
+.answereBTN{
+    width: 150px;
+    background-color: #2ecc71;
+    border-color: transparent;
+    border-radius: 5px;
+    height: 35px;
+    font-size: large;
+    margin-top: 1em;
+    margin-left: 35%;
+    font-weight: bolder;
+}

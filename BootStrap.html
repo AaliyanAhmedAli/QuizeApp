@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./image/Quiz_App-Logo.png">
+
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary my-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Quiz.html"><img src="./image/Quiz_App-Logo.png" alt="" width="100"class="login-image"> </a>
+              <ul>
+                <li class="nav-item li">
+                  <a class=" logout" href="" onclick="doLogout()"><button class="log-btn"> Log Out</button></a>
+                </li> 
+              </ul>
+            </div>
+    </nav>
+    <div class="container">
+        <div class="quiz-card">
+            <h2 class="quiz1Heading">BootStrap Quiz</h2>
+            <p id="question"></p>
+            <input type="radio" id="option1" name="options">
+            <label for="option1" id="option1Label"></label><br>
+            <input type="radio" id="option2" name="options">
+            <label for="option2" id="option2Label"></label><br>
+            <input type="radio" id="option3" name="options">
+            <label for="option3" id="option3Label"></label><br>
+            <input type="radio" id="option4" name="options">
+            <label for="option4" id="option4Label"></label><br>
+            <button onclick="checkAnswer()" class="answereBTN">Submit</button>
+            <p id="result"></p>
+            <p id="timer"></p>
+        </div>
+    </div>
+
+
+<script>
+    var questions = [{
+    question: "Which of the following class styles a table with a light gray background to rows while the cursor hovers over them?",
+    options: [".table", " .table-striped", "table-bordered",".table-hover"],
+    answer: 3
+    }, {
+    question: "Which of the following bootstrap style of button represents a contextual button for informational alert messages?",
+    options: [".btn", ".btn-primary", ".btn-success", ".btn-info"],
+    answer: 3
+    }, {
+    question: "Which of the following bootstrap style can be applied to button group instead of resizing each button?",
+    options: [".btn-group", ".btn-toolbar", ".btn-group-lg",".btn-group-vertical"],
+    answer: 2
+    }, {
+    question: "Which of the following bootstrap style is used to add text to .navbar?",
+    options: [".navbar-text", ".text", " None of the above.", ".form-text"],
+    answer: 0
+    }, {
+    question: "Which of the following bootstrap style can be used to customize .pagination links?",
+    options: ['.disabled, .active', " .pagination-active, .pagination-disabled", ".menu-active, .menu-disabled", "None of the above."],
+    answer: 0
+    }, {
+    question: "The Bootstrap grid system is based on how many columns?",
+    options: ["6", "12", "9", "14"],
+    answer: 1
+    }, {
+    question: "In Bootstrap, content must be placed within...",
+    options: ["Rows", "Columns", "Container", "Div"],
+    answer: 1
+    }, {
+    question: "What class name would you make a full width container in Bootstrap?  ",
+    options: [".container-fluid", ".container-width", ".container-full", ".container-fw"],
+    answer: 2
+    }, {
+    question: "If you want to have 3 equal columns in Bootstrap, which class would you use?",
+    options: [".col-md-3", ".col-md-7", ".col-md-12", ".col-md-4"],
+    answer: 3
+    }, {
+    question: "A big challenge with responsive design is finding a balance between the content needs for both mobile and desktop. A desktop site has a lot of visual real estate that is often filled with carousels, videos, large parallax background images, and large blocks of text.",
+    options: ["True","False"],
+    answer: 0
+    }, {
+    question: "A mobile first approach considers the goals of a mobile user and presents the content to help them achieve those goals. It removes all of the fluff and filler content and presents a concise collection of content that loads fast and is easy to use.",
+    options: ["True","False"],
+    answer: 0
+    }, {
+    question: "Each class name begins with a prefix. Class name prefixing makes Bootstrap code more durable and easier to maintain, but it also better enables us to scope styles to only the relevant elements. What is another name for these elements or group of elements?",
+    options: ["Components", "Widgets", "Styles", "Rulesets"],
+    answer: 0
+    }, {
+    question: "What Bootstrap version should you use if you need to support IE9?",
+    options: ["Bootstrap2", "Bootstrap3", "Bootstrap4", "Bootstrap2.5"],
+    answer: 1
+    }, {
+    question: "Flexbox is NOT a core CSS technology but a custom named component created by Bootstrap.",
+    options: ["True", "False"],
+    answer: 1
+    }, {
+    question: "Cards replace panels, thumbnails, and wells used in Bootstrap 3 and are essentially a contained group of content with a border and inner padding.",
+    options: ["True", "False"],
+    answer: 0   
+    }];
+    
+    var currentQuestion = 0;
+    var score = 0;
+    var timer;
+    
+    function startQuiz() {
+    showQuestion();
+    startTimer();
+    }
+    
+    function showQuestion() {
+    var questionElement = document.getElementById('question');
+    var option1Label = document.getElementById('option1Label');
+    var option2Label = document.getElementById('option2Label');
+    var option3Label = document.getElementById('option3Label');
+    var option4Label = document.getElementById('option4Label');
+    
+    var currentQues = questions[currentQuestion];
+    questionElement.textContent = currentQues.question;
+    option1Label.textContent = currentQues.options[0];
+    option2Label.textContent = currentQues.options[1];
+    option3Label.textContent = currentQues.options[2];
+    option4Label.textContent = currentQues.options[3];
+    }
+    
+    function checkAnswer() {
+    var options = document.getElementsByName('options');
+    var selectedOption;
+    
+    for (var i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+            selectedOption = i;
+            break;
+        }
+    }
+    
+    if (selectedOption === questions[currentQuestion].answer) {
+        score++;
+    }
+    
+    currentQuestion++;
+    
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        endQuiz();
+    }
+    }
+    
+    function startTimer() {
+    var timeLimit = 25 * 60;
+    var timerElement = document.getElementById('timer');
+    timerElement.textContent =
+        timerElement.textContent = formatTime(timeLimit);
+    
+    timer = setInterval(function() {
+        timeLimit--;
+        timerElement.textContent = formatTime(timeLimit);
+    
+        if (timeLimit <= 0) {
+            endQuiz();
+        }
+    }, 1000);
+    }
+    
+    function formatTime(time) {
+    var minutes = Math.floor(time / 60);
+    var seconds = time % 60;
+    return minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+    }
+    
+    function endQuiz() {
+    clearInterval(timer);
+    
+    var quizCard = document.querySelector('.quiz-card');
+    quizCard.innerHTML = '<h2>Quiz Completed</h2>' +
+        '<p>Your score: ' + score + '/' + questions.length + '</p>';
+    
+    }
+    startQuiz();      
+</script>
+
+
+</body>
+</html>
